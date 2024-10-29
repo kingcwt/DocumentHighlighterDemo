@@ -1,0 +1,143 @@
+// #root {
+//   width: 100%;
+//   height: 100vh;
+//   .app {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     .container {
+//       width: 100%;
+//       height: 100%;
+//       display: flex;
+//       justify-content: center;
+//       .canvas-container {
+//         border: 1px solid #ccc;
+//         overflow: hidden;
+//         width: 600px;
+//         height: 600px;
+//         .move-container {
+//           position: absolute;
+//           width: 325.999px;
+//           height: 461px;
+//           left: 295.5px;
+//           top: 0px;
+//           .img {
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .result {
+//     width: 100%;
+//     max-width: 600px; /* 或者您希望的最大宽度 */
+//     margin: 0 auto;
+
+//     .result-left {
+//       width: 100%;
+//       height: 100%;
+//       background-color: #fff;
+//       padding: 7px 7px;
+//       float: left;
+//       border-radius: 10px;
+//       box-shadow: 0 2px 2px 0 rgba(177, 186, 199, 0.4);
+//       .result-left-content {
+//         height: calc(100% - 30px);
+//         background: #f3f5f7;
+//         box-shadow: 0 2px 2px 0 rgba(177, 186, 199, 0.4);
+//         border-radius: 5px;
+//         position: relative;
+//       }
+//     }
+//   }
+// }
+
+// #root {
+//   width: 100%;
+//   height: 100vh;
+//   .app {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+
+//     .container {
+//       width: 100%;
+//       height: 100%;
+//       display: flex;
+//       justify-content: center;
+//       .result {
+//         background: #eee;
+//         padding: 24px;
+//         box-sizing: border-box;
+//         border: 1px solid;
+//         .canvas-container {
+//           overflow: hidden;
+//           width: 600px;
+//           height: 600px;
+//           background: #f3f5f7;
+//           .move-container {
+//             position: relative;
+//             overflow: hidden;
+//             width: 800px;
+//             height: 600px;
+//             border: 1px solid #eee;
+//             background: aquamarine;
+//             .img {
+//               width: 100%;
+//               height: 100%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+#root,
+.app {
+  width: 100%;
+  height: 100%;
+}
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .data-points {
+    background: #eee;
+    border: 1px solid #eee;
+    display: flex;
+    width: 500px;
+    margin-left: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: calc(100vh - 140px);
+
+    .data-point {
+      background: transparent;
+      border: 1px solid rgba(25, 118, 210, 0.5);
+      color: rgb(25, 118, 210);
+      margin: 8px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 12px;
+    }
+    .active {
+      color: rgb(255, 255, 255);
+      background-color: rgb(25, 118, 210);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+        rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+  }
+}
